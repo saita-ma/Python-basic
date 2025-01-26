@@ -9,7 +9,7 @@ class Group:
 
     def add_student(self, student):
         if len(self.group) == self.student_limit:
-            raise GroupLimitReachedException(f"Group limit {self.student_limit} reached", self.number)
+            raise GroupLimitReachedException(f"Group limit {self.student_limit} reached, cannot add: {student}", self.number)
         self.group.add(student)
 
     def delete_student(self, last_name):
